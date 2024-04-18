@@ -2,6 +2,10 @@
 
 set -eu
 
-cd pack
-zip -r ../UNg-Script-Pack.zip .
+name="UNg-Script-Pack.zip"
 
+pushd pack
+zip -rq "../$name" .
+popd
+
+sha1sum "$name"
